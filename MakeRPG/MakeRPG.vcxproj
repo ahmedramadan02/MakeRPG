@@ -41,6 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\aramadan\Documents\Visual Studio 2013\Projects\MakeRPG\Libs\SDL2_mixer\include;C:\Users\aramadan\Documents\Visual Studio 2013\Projects\MakeRPG\Libs\SDL2_image\include;C:\Users\aramadan\Documents\Visual Studio 2013\Projects\MakeRPG\Libs\SDL2\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -56,7 +57,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Medo\Documents\Visual Studio 2013\Projects\libs\SDL2_mixer\lib\x86;C:\Users\Medo\Documents\Visual Studio 2013\Projects\libs\SDL2_image\lib\x86;C:\Users\Medo\Documents\Visual Studio 2013\Projects\libs\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\aramadan\Documents\Visual Studio 2013\Projects\MakeRPG\Libs\SDL2_mixer\lib\x86;C:\Users\aramadan\Documents\Visual Studio 2013\Projects\MakeRPG\Libs\SDL2_image\lib\x86;C:\Users\aramadan\Documents\Visual Studio 2013\Projects\MakeRPG\Libs\SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_mixer.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
