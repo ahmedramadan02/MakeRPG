@@ -31,6 +31,36 @@ void CMain::GameLoop(){
 		grass->Draw();
 		bob->Draw();
 
+		// handling the keypress
+		switch (sdl_setup->GetEvent()->type)
+		{
+		case SDL_KEYDOWN:
+			switch (sdl_setup->GetEvent()->key.keysym.sym)
+			{
+			case SDLK_a:
+				std::cout << "a key was pressed!" << std::endl;
+				break;
+
+			case SDLK_s:
+				std::cout << "s key was pressed!" << std::endl;
+				break;
+
+			case SDLK_d:
+				std::cout << "d key was pressed!" << std::endl;
+				break;
+
+			case SDLK_w:
+				std::cout << "w key was pressed!" << std::endl;
+				break;
+			default:
+				break;
+			}
+
+			break;
+		default:
+			break;
+		}
+
 		sdl_setup->End();
 	}
 }
