@@ -3,7 +3,7 @@ class CSDL_Setup
 {
 public:
 	CSDL_Setup();
-	CSDL_Setup(bool*);
+	CSDL_Setup(bool*, int, int);
 	~CSDL_Setup();
 
 	SDL_Window* GetWindow();

@@ -6,7 +6,7 @@
 
 int main(int argc, char* argv[])
 {
-	CMain main;
+	CMain main(700,600);
 	main.GameLoop();
 
 	return 0;

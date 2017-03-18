@@ -2,7 +2,7 @@
 #include "SDL_Setup.h"
 
 
-CSDL_Setup::CSDL_Setup(bool* quit)
+CSDL_Setup::CSDL_Setup(bool* quit, int _screenWidth, int _screenHeight)
 {
 	//SDL Components
 	SDL_Init(SDL_INIT_VIDEO);
