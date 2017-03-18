@@ -19,6 +19,8 @@ CMain::CMain(int _screenWidth, int _screenHeight)
 
 CMain::~CMain()
 {
+	delete grass;
+	delete bob;
 	delete sdl_setup;
 }
 
