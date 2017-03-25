@@ -14,6 +14,11 @@ private:
 	bool quit;
 	int screenWidth, screenHeight;
 
+	bool MoveRight;
+	bool MoveLeft;
+	bool MoveUp;
+	bool MoveDown;
+
 	CSDL_Setup* sdl_setup;
 	CSprite* grass;
 	CSprite* bob;
