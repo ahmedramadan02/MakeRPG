@@ -19,6 +19,9 @@ CMain::CMain(int _screenWidth, int _screenHeight)
 	MoveLeft = false;
 	MoveUp = false;
 	MoveDown = false;
+
+	//getting the time ticks
+	currentTime = SDL_GetTicks();
 }
 
 
@@ -99,23 +102,37 @@ void CMain::GameLoop(){
 			break;
 		}
 
+		//Move only every specific period of time, specified by TIME_DIFF
+		if (CheckTime()){
+			if (MoveRight){
+				bob->SetX(bob->GetX() + 1);
+			}
 
-		if (MoveRight){
-			bob->SetX(bob->GetX() + 1);
+			if (MoveLeft){
+				bob->SetX(bob->GetX() - 1);
+			}
+
+			if (MoveUp){
+				bob->SetY(bob->GetY() - 1);
+			}
+
+			if (MoveDown){
+				bob->SetY(bob->GetY() + 1);
+			}
+
+			//RESET the current time
+			ResetTime();
 		}
-
-		if (MoveLeft){
-			bob->SetX(bob->GetX() - 1);
-		}
-
-		if (MoveUp){
-			bob->SetY(bob->GetY() - 1);
-		}
-
-		if (MoveDown){
-			bob->SetY(bob->GetY() + 1);
-		}
-
 		sdl_setup->End();
 	}
 }
+
+//(i.e. i want to move every half second then; currentTime + 500 < actualTime)
+bool CMain::CheckTime(){
+	if (SDL_GetTicks() > (Uint32)(this->currentTime + TIME_DIFF))
+		return true;
+	else
+		return false;
+
+}
+
